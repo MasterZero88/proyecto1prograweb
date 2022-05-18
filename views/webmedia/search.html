@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WebMedia-Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/uikit.min.css" />
+        <script src="../../js/uikit.min.js"></script>
+        <script src="../../js/uikit-icons.min.js"></script>
+        <script src="../../js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        {{> navbar}}
+        <br>
+        <p uk-margin>
+           <a  class="uk-button uk-button-primary" href="/webmedia">Back</a>
+        </p>
+        <br>
+        <form action="/searchMedia" method="POST" class="uk-grid-small" uk-grid>
+            <div class="uk-width-1-1">
+                <label class="uk-form-label" for="form-stacked-text">Title</label>
+                
+                <input class="uk-input" type="text" placeholder="Search by Title" name="title">
+            </div>
+            <p uk-margin>
+                <button class="uk-button uk-button-primary uk-button-large">Search</button>
+            </p>
+        </form>
+
+    </body>
+</html>

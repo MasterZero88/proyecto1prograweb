@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WebMedia-Share</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/uikit.min.css" />
+        <script src="../../js/uikit.min.js"></script>
+        <script src="../../js/uikit-icons.min.js"></script>
+        <script src="../../js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        {{> navbar}}
+        <br>
+        <p uk-margin>
+             <a  class="uk-button uk-button-primary" href="/webmedia">Back</a>
+        </p>
+        <br>
+        <form action="/createShare" method="POST" class="uk-grid-small" uk-grid >
+            <div class="uk-width-1-1">
+                <label class="uk-form-label" for="form-stacked-text">Title</label>
+                
+                <input class="uk-input" type="text" placeholder="Title" name="title">
+            </div>
+            <div class="uk-width-1-1">
+                <label class="uk-form-label" for="form-stacked-select">Theme</label>
+                <select class="uk-select" name="idTheme">
+                    {{#themes}}
+                    <option value="{{id}}">{{name}}</option>
+                    {{/themes}}
+                </select>
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label" for="form-stacked-text">Url</label>
+                <input class="uk-input" type="text" placeholder="Url" name="url">
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label" for="form-stacked-select">Destiny</label>
+                <select class="uk-select" name="destiny">
+                    {{#users}}
+                    <option value="{{id}}">{{name}} {{lastname}} - {{email}}</option>
+                    {{/users}}
+                </select>
+            </div>
+            <p uk-margin>
+                <button class="uk-button uk-button-primary uk-button-large">Share</button>
+            </p>
+        </form>
+
+    </body>
+</html>

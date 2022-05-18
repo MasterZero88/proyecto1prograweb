@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WebMedia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/uikit.min.css" />
+        <script src="../../js/uikit.min.js"></script>
+        <script src="../../js/uikit-icons.min.js"></script>
+        <script src="../../js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        {{> navbar}}
+        <br>
+        <p uk-margin>
+            <a  class="uk-button uk-button-primary" href="/webmedia/share">Share WebMedia</a>
+            <a class="uk-button uk-button-secondary" href="/webmedia/search">Search WebMedia</a>
+        </p>
+        <br>
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+            {{#myWebMedia}}
+            <div>
+                <div class="uk-card uk-card-secondary uk-card-body">
+                    <h3 class="uk-card-title">{{title}}</h3>
+                    <p> <a href="{{url}}">Show web link</a></p>
+                </div>
+            </div>
+            {{/myWebMedia}}
+        </div>
+
+    </body>
+</html>
